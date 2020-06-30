@@ -1,14 +1,44 @@
 <html>
 <head>    
-    <title>Nyan Kat</title> 
-</head> 
+    <title>Space Heist</title> 
+    <style>
+            #startBtn{
+            position: absolute;
+            top: 1025px;
+            left: 800px;
+            width: 200px;
+            height: 100px;
+            font-size: 20px;
+            z-index: 5000;
+        }
+    </style>
+</head>
 <body>    
-    <div id="app"></div> 
+    <div id="app"></div>
+    <div id='score'>SCORE</div>
+    <button type="button" id="startBtn" onclick="song.play()" >Collect the Hearts</button>
+    <script>
+        const song = new Audio(); 
+        song.src="images/savant.mp3"
+        //function setHalfVolume() { 
+  //song.volume = 0.2;
+//} 
+    </script>
     <script src="js/data.js"></script> 
-    <script src="js/Enemy.js"></script> 
+    <script src="js/Enemy.js"></script>
+    <script src="js/bonus.js"></script> 
     <script src="js/engine-utilities.js"></script> 
     <script src="js/Engine.js"></script> 
     <script src="js/Player.js"></script> 
-    <script src="js/main.js"></script> 
+    <script src="js/main.js"></script>
+    <p>
+        -
+    </p>
+    <p>
+        Dodge the enemy ships using the left and right arrow keys
+    </p>
+    <p>
+        Collect Hearts to increase your score
+    </p>
 </body> 
 </html> 

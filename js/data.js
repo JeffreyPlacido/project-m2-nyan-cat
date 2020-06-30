@@ -1,19 +1,29 @@
-// In this file we have some data that the other source files will use.
-// Most of this data is stored in constants.
-// Constants are just variables that never change. By convention,
-// We write constants with upper case letters.
+const GAME_WIDTH = 1700;
+const GAME_HEIGHT = 900;
 
-// The GAME_WIDTH and GAME_HEIGHT constants denote the size
-// of the game area in pixels and is used in engine-utilities.js.
-const GAME_WIDTH = 375;
-const GAME_HEIGHT = 500;
+const ENEMY_WIDTH = 50;
+const ENEMY_HEIGHT = 50;
+const MAX_ENEMIES = 21;
 
-// These constants represent the width and height of an enemy in pixels
-// as well as the maximum number of enemies on screen at any given time.
-const ENEMY_WIDTH = 75;
-const ENEMY_HEIGHT = 156;
-const MAX_ENEMIES = 3;
+const BONUS_WIDTH = 50;
+const BONUS_HEIGHT = 50;
+const MAX_HEARTS = 11;
 
-// These constants represent the player width and height.
-const PLAYER_WIDTH = 75;
-const PLAYER_HEIGHT = 54;
+const PLAYER_WIDTH = 50;
+const PLAYER_HEIGHT = 50;
+
+let minSpeed = 0.4;
+
+setInterval(function(){ minSpeed += 0.04; }, 2500);
+
+let score = 0;
+
+let scoreDisplay = document.getElementById('score');
+scoreDisplay.innerText = score;
+scoreDisplay.style.zIndex = 24;
+scoreDisplay.style.position = 'absolute';
+scoreDisplay.style.left = 1640;
+scoreDisplay.style.top = 20;
+scoreDisplay.style.color = 'red';
+scoreDisplay.style.font = 'bold 40px Atarian System';
+//document.querySelector('#score').appendChild(scoreDisplay);
